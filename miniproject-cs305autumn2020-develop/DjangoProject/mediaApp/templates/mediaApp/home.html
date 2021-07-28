@@ -1,0 +1,130 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+{% if user.is_authenticated or glogin %}
+<span class="login100-form-title p-b-55">CS305&emsp;MiniProject</span>
+	<br>
+	<div class="wrap-input100 validate-input m-b-16">
+	<form action="{% url 'youtube_query' %}" method="post">
+		{% csrf_token %}
+		<div style="width:30%">
+			<input class="form-control" type="text" name="query" placeholder="Search Youtube , GDrive , Database" aria-label="Search" required>
+			<button class="form-control" type="submit" style="font-size: larger;">Search</button>
+		</div>
+		<br>
+	</form>
+
+    {% if youtube_error_status %}
+        {{ youtube_error_message }}
+    {% endif %}
+	{% if videos or api_response %}
+	<ul>
+		showing results for '{{ original_query }}' :
+		<br><br>
+		<div class="text-muted"> YouTube response </div>
+		<br>
+		{% for video in videos  %}
+		<li><a href="{% url 'show_video' vid=video.page_link %}">
+			<div class="row" style="width:50%">
+				<div class="col-md-auto" style="width:25%"><img src={{ video.thumbnail }} alt="thumbnail"></div>
+				<div class="col-md-5" style="width:25%">{{ video.video_title }}</div>
+			</div> 
+            </a>
+		</li>
+		<li>
+		<br>
+		</li>
+		{% endfor %}
+		<div class="col-md-6"  style="width:30%">
+			<a target="_blank" href={{ show_more_link }}><button class="form-control">Show more on Youtube</button></a>
+		</div>
+		<br>
+		<hr>
+		<div class="text-muted"> Database response </div>
+		<br>
+		{% for video in api_response %}
+		<li>
+			<div class="row" style="width:50%">
+				<div class="col-md-auto" style="width:25%"><img style = "max-width:100%;" src=/media/{{ video.thumb }} alt="thumbnail"></div>
+				<div class="col-md-5" style="width:25%"><a href="{% url 'show_local_video' vid=video.Video_file %}">{{ video.title }}</a></div>
+			</div>
+		</li>
+		<li>
+		<br>
+		</li>
+		{% endfor %}
+	</ul>
+	{% elif not youtube_error_status %}
+		Enter Keywords Above
+	{% endif %}
+
+	<br>
+	<br>
+	{% if current_video_id %}
+
+	<div style="position:absolute;top:160px; right:100px;">
+		<div class="text-muted"> YouTube video </div>
+		<hr>
+		<iframe width="850" height="500" src={{ current_video_id }} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	{% elif flag %}
+
+	<div style="position:absolute;top:160px; right:100px;">
+		<div class="text-muted"> Drive video </div>
+		<hr>
+		<video width="850" controls>
+    <source src="https://drive.google.com/uc?export=download&id={{current_drive_id}}" type='video/mp4'>
+		</video>
+
+	</div>
+	{% elif current_api_video_id %}
+	<div style="position:absolute;top:160px; right:100px;">
+		<div class="text-muted"> Database video </div>
+		<hr>
+		<video controls>
+			<source src="/media/{{ current_api_video_id }}" />
+		</video>
+	</div>
+	{% endif %}
+
+
+
+
+	{%for key, values in out.items%}
+			<br>
+			{% if 'mp4' in values or 'mkv' in values%}
+	
+			<br>
+			<form action="{% url 'download'%}" method="post">
+					{% csrf_token %}
+					<a href="{% url 'show_drive_video' key %}" >{{values}} </a>
+					<input type="hidden" value = '{{values}}' name="iname">
+					<input type="hidden" value = '{{key}}' name="ikey">
+					<input type="submit" value="Download">
+			</form>
+			{% elif 'Enter Something in Search Bar' in values%}
+			{{values}}
+			{% else %}
+			<form action="{% url 'download'%}" method="post">
+					{% csrf_token %}
+					{{values}}
+					<input type="hidden" value = '{{values}}' name="iname">
+					<input type="hidden" value = '{{key}}' name="ikey">
+					<input type="submit" value="Download">
+			</form>
+			{% endif %}
+			<br>
+	{%endfor%}
+
+{% else %}
+	 <h2 class="alert alert-danger">Please Login</h2>
+	<small class="text-muted">
+        Want to continue your browsing ?
+		<a href="{% url 'login' %}">Log in</a>
+        <br>
+        Or create a new account ?
+		<a href="{% url 'signup' %}">Sign up</a>
+    </small>
+{% endif %}
+
+{% endblock content%}
