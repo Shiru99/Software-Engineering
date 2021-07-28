@@ -1,0 +1,57 @@
+1. Summary:
+
+Author Frederick P. Brooks, Jr. in his paper-"No Silver Bullet —Essence and Accident in Software Engineering" is pointing difficulties or problems in software development as well as the root cause and potential strategies or solutions for that.
+
+The author uses the metaphor 'warewolves' for the software project (development). Warewolves - A person who seems to be completely normal can transform into a creature with horrific stories and nightmares, just like that a software project (development) can turn into monster with missed schedules, blown budgets and flawed devices. Makes perfect sense of silver bullet - something to make software costs drop as rapidly as computer hardware costs do. 
+
+According to him the essence of a software entity is the construction of interlocking concepts: data sets, relationships between data items, algorithms, and function invocations. And the hard parts of software development are the specification, design and testing of this conceptual construction, not the work of representing it and evaluating the consistency of the representation.
+
+Author further adds The fundamental properties : complexity, conformity, changeability and invisibility, of irreducible essence of modern software systems.
+
+Author also discuss about past breakthroughs & the how some of the accidental difficulties got solved because of these breakthroughs. 
+a. High-level languages - It frees a program from much of its accidental complexity. the high-level language embodies the constructs wanted in the abstract program and avoids all lower ones, it eliminates a whole level of complexity that was never inherent in the program at all. 
+b. Time-sharing - Time-sharing guarantees promptness and therefore helps one to hold an outline of complexity. 
+c. Unified programming - integrated libraries, unified file formats and piles and filters, solves the accidental problems.
+
+Author believes the high-level programming languages, object-oriented programming, artificial intelligence and automatic programming. In addition, Graphical programming, Program verification,Environments and tools, Workstations can reduce development complexities
+
+At the end he adds, Promising Attacks on the Conceptual Essence by explaining buying the software vs building same (author believes on - cheaper to buy than to build afresh), Requirements refinement and rapid prototyping, Incremental development also explains how to get and grow Great designers as he belives - great designers are as important to its success as great managers are.
+
+
+
+-----------------------------------------------------------------------------------------
+
+2. 
+
+
+Paragraph : 
+            # Hopes for the Silver 
+                11. Program verification :
+
+Ans .
+
+1. Was he right ?
+    Yes author was right, we havn't find this magic yet so, no program verification tool is available till date. [EDIT - https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2014/1420533.pdf]
+
+2. Does it still hold true ?
+
+    program Verifications means 
+
+        1. verifing the final outputs (possible)
+            'even perfect program verification can only establish that a program meets its specification'
+        2. verifying the way in which we get particular outputs
+            (there maybe differnt ways to get desirable output like 2+2=4 & 2*2=4 and both are correct to get output 4 but processing addition & multiplication as complete differnt things)
+
+    So in simple words, the tool deciding correct way to get the desired output => 'Automatic' programming.
+
+    deciding correct way for particular output is complex thing as tool must know the results (possible errors & outputs) for each method. 
+
+    So, yes. it still hold true
+
+    but yeah who knows the future...
+    
+
+3. Did he miss anything ?
+
+    NO ! he has covered both the points. But yes, We can call program Verification as advanced version of automatic programming. And with advanced Machine learning & artifical intelligence it can be possible in future.
+
