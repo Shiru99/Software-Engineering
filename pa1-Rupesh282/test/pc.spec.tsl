@@ -1,0 +1,258 @@
+
+Test Case 1  		<single>
+   Filegiven :  notgiven
+
+
+Test Case 2  		<error>  (follows [if])
+   Filetype :  NontextFile
+
+
+Test Case 3  		(Key = 1.1.1.1.0.0.0.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  empty
+   Sentences      :  NoSentence
+   Words          :  <n/a>
+   Delimeter      :  <n/a>
+   MinWordLength  :  <n/a>
+
+
+Test Case 4  		(Key = 1.1.2.2.1.1.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  Singleword
+   Delimeter      :  IsSpecialCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 5  		(Key = 1.1.2.2.1.1.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  Singleword
+   Delimeter      :  IsSpecialCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 6  		(Key = 1.1.2.2.1.2.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  Singleword
+   Delimeter      :  IsNotSpecialCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 7  		(Key = 1.1.2.2.1.2.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  Singleword
+   Delimeter      :  IsNotSpecialCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 8  		(Key = 1.1.2.2.1.3.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  Singleword
+   Delimeter      :  NotSingleCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 9  		(Key = 1.1.2.2.1.3.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  Singleword
+   Delimeter      :  NotSingleCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 10 		(Key = 1.1.2.2.2.1.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  IsSpecialCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 11 		(Key = 1.1.2.2.2.1.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  IsSpecialCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 12 		(Key = 1.1.2.2.2.2.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  IsNotSpecialCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 13 		(Key = 1.1.2.2.2.2.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  IsNotSpecialCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 14 		(Key = 1.1.2.2.2.3.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  NotSingleCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 15 		(Key = 1.1.2.2.2.3.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  OneSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  NotSingleCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 16 		(Key = 1.1.2.3.1.1.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  Singleword
+   Delimeter      :  IsSpecialCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 17 		(Key = 1.1.2.3.1.1.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  Singleword
+   Delimeter      :  IsSpecialCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 18 		(Key = 1.1.2.3.1.2.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  Singleword
+   Delimeter      :  IsNotSpecialCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 19 		(Key = 1.1.2.3.1.2.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  Singleword
+   Delimeter      :  IsNotSpecialCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 20 		(Key = 1.1.2.3.1.3.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  Singleword
+   Delimeter      :  NotSingleCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 21 		(Key = 1.1.2.3.1.3.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  Singleword
+   Delimeter      :  NotSingleCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 22 		(Key = 1.1.2.3.2.1.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  IsSpecialCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 23 		(Key = 1.1.2.3.2.1.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  IsSpecialCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 24 		(Key = 1.1.2.3.2.2.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  IsNotSpecialCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 25 		(Key = 1.1.2.3.2.2.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  IsNotSpecialCharacter
+   MinWordLength  :  Is<0
+
+
+Test Case 26 		(Key = 1.1.2.3.2.3.1.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  NotSingleCharacter
+   MinWordLength  :  Is>0
+
+
+Test Case 27 		(Key = 1.1.2.3.2.3.2.)
+   Filegiven      :  given
+   Filetype       :  TextFile
+   File           :  nonempty
+   Sentences      :  MultipleSentence
+   Words          :  EverywordLen<MinWordLength
+   Delimeter      :  NotSingleCharacter
+   MinWordLength  :  Is<0
+
